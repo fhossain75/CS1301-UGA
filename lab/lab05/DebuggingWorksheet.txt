@@ -1,0 +1,33 @@
+CSCI 1301 - Lab 05
+Debugging Worksheet
+
+Student Name:	
+
+1. What do you observe when you run the program? 
+
+2. Where (what line numbers) have you set the breakpoints? 
+
+3. What is the value of the named constant MIN_FAHRENHEIT and the variable tempScaleStr displayed in the Variables window? 
+
+	MIN_FAHRENHEIT: 
+	
+	tempScaleStr:
+
+4. Answer the following questions:
+
+  a) Does the first if statement display the error message correctly? 
+  b) What is the problem?
+  c) How would you fix the program so it terminates when the user enters a Fahrenheit temperature less than the possible minimum temperature?
+
+5. Answer the following questions:
+
+  a) Is the condition of the second if statement correct? 
+  b) How will you change it?
+
+6. What is the value of the expression you just selected in the Watch window?
+
+7. Answer the following questions:
+
+  a) Does the program compute the correct temperature in Rankine degrees?  In Reamur degrees?
+  b) Does the program assign the correct value for the variable tempScaleStr?
+  c) How can you modify the program to compute this equivalence properly?

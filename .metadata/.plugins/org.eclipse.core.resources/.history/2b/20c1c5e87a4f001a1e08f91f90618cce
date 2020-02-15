@@ -1,0 +1,30 @@
+package GradeCalculator;
+
+import java.util.Scanner; //Import Scanner class
+import java.lang.Math; //Import Math class
+
+
+public class GradeCalculator {
+	
+	public static char desiredGrade;
+	public static double exam1;
+	public static double exam2;
+	public static double finalExam;
+	public static double labs;
+	public static double quizzes;
+	public static double projects;
+	public static double participation;
+
+	public static void main(String[] args) {
+		// Scanner Init
+		Scanner keyboard = new Scanner(System.in);
+		
+		//User's final grade wanted
+		System.out.println("What letter grade do you want to achieve for the course?");
+		double desiredGrade = keyboard.next().charAt(0);
+		double grossPay = pay_per_hour * hoursPerWeek;
+		
+		
+		keyboard.close();
+	}
+}
