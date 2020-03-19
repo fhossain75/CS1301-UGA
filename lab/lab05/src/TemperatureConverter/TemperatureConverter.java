@@ -67,7 +67,7 @@ public class TemperatureConverter{
 			 "Enter a temperature scale: ");
 	 tempScale = keyboard.nextInt();
 	 
-	 if (!(tempScale >= 1 || tempScale < 4))  {  // Second-if statement: Set a breakpoint here
+	 if (tempScale < 1 || tempScale > 4)  {  // Second-if statement: Set a breakpoint here
 		 System.out.println("Unknown temperature scale  -" +
 		 					"  cannot do calculation. Bye");
 	 }
