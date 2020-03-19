@@ -65,14 +65,14 @@ public class RockPaperScissors {
 			// Invalid Player Move Instance
 			else if (!(playerMove.equalsIgnoreCase("ROCK")  ||
 					   playerMove.equalsIgnoreCase("PAPER") ||
-					   playerMove.equalsIgnoreCase("SCISSOR"))) {
+					   playerMove.equalsIgnoreCase("SCISSORS"))) {
 				System.out.println("Please choose 'rock', 'paper', or 'scissors'!");
 			}
 			
 			// Player Winning Instance
-			else if ((playerMove.equalsIgnoreCase("ROCK") && computerMove.equalsIgnoreCase("SCISSOR")) ||
+			else if ((playerMove.equalsIgnoreCase("ROCK") && computerMove.equalsIgnoreCase("SCISSORS")) ||
 					 (playerMove.equalsIgnoreCase("PAPER") && computerMove.equalsIgnoreCase("ROCK"))   ||
-					 (playerMove.equalsIgnoreCase("SCISSOR") && computerMove.equalsIgnoreCase("PAPER"))) {
+					 (playerMove.equalsIgnoreCase("SCISSORS") && computerMove.equalsIgnoreCase("PAPER"))) {
 				playerScore += 1;
 				System.out.println("The computer chose " + computerMove +
 							", so you win! (" + playerScore +
