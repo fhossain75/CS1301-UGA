@@ -28,14 +28,11 @@ package DrawingShapes;
 
 import java.util.Scanner; // Import Scanner class
 
-public class DrawingShapes {
+public class DrawingShapesOriginal {
 	
 	public static char shape;
 	public static int length;
 	public static int height;
-	public static int astriskCount = 0;
-	public static int spaceCount = 0;
-	public static String astriskString = "";
 
 	public static void main(String[] args) {
 		
@@ -59,12 +56,8 @@ public class DrawingShapes {
 				}
 				else {
 					System.out.println("Below is a " + length + " by " + height + " rectangle of *");
-					astriskCount = length;
-					for (int i = 0; i < astriskCount; i++) {
-						astriskString += "*";
-					}
-					for (int i = 0; i < height; i++) {
-						System.out.println(astriskString);
+					for (int i = 0; i < height;i++) {
+						System.out.println("*".repeat(length));
 					}
 				}
 			}
@@ -77,16 +70,7 @@ public class DrawingShapes {
 			if (length > 1) {
 				System.out.println("Below is a triangle with two side lengths of " + length + " *");
 				for (int i = 0; i < length;i++) {
-					astriskString = "";
-					spaceCount = length-1-i;
-					astriskCount = 1+(i*2);
-					for (int j = 0; j < spaceCount; j++) {
-						astriskString += " ";
-					}
-					for (int k = 0; k < astriskCount; k++) {
-						astriskString += "*";
-					}
-					System.out.println(astriskString);
+					System.out.println(" ".repeat((length-1)-i) + "*".repeat(1+(i*2)));
 				}
 			}
 			else {
@@ -100,31 +84,11 @@ public class DrawingShapes {
 			length = keyboard.nextInt();
 			if (length > 1) {
 				System.out.println("Below is a hexagon with side lengths of " + length + " *");
-				// For-loop for upper hexagon
 				for (int i = 0; i < length;i++) {
-					astriskString = "";
-					spaceCount = (length-1)-i;
-					astriskCount = length+(i*2);
-					for (int j = 0; j < spaceCount; j++) {
-						astriskString += " ";
-					}
-					for (int k = 0; k < astriskCount; k++) {
-						astriskString += "*";
-					}
-					System.out.println(astriskString);
+					System.out.println(" ".repeat((length-1)-i) + "*".repeat(length+(i*2)));
 				}
-				// For-loop for lower hexagon
 				for (int i = length-1; i > 0;i--) {
-					astriskString = "";
-					spaceCount = length-i;
-					astriskCount = length-2+(i*2);
-					for (int j = 0; j < spaceCount; j++) {
-						astriskString += " ";
-					}
-					for (int k = 0; k < astriskCount; k++) {
-						astriskString += "*";
-					}
-					System.out.println(astriskString);
+					System.out.println(" ".repeat(length-i) + "*".repeat(length-2+(i*2)));
 				}
 			}
 			else {
@@ -138,40 +102,14 @@ public class DrawingShapes {
 			length = keyboard.nextInt();
 			if (length > 1) {
 				System.out.println("Below is a octagon with side lengths of " + length + " *");
-				// For-loop for upper Octagon
 				for (int i = 0; i < length;i++) {
-					astriskString = "";
-					spaceCount = (length-1)-i;
-					astriskCount = length+(i*2);
-					for (int j = 0; j < spaceCount; j++) {
-						astriskString += " ";
-					}
-					for (int k = 0; k < astriskCount; k++) {
-						astriskString += "*";
-					}
-					System.out.println(astriskString);
+					System.out.println(" ".repeat((length-1)-i) + "*".repeat(length+(i*2)));
 				}
-				// For-loop for middle hexagon
 				for (int i = 0; i < length-2;i++) {
-					astriskString = "";
-					astriskCount = length-2+(length*2);
-					for (int k = 0; k < astriskCount; k++) {
-						astriskString += "*";
-					}
-					System.out.println(astriskString);
-				}
-				// For-loop for lower hexagon
+					System.out.println("*".repeat(length-2+(length*2)));
+				}	
 				for (int i = length; i > 0;i--) {
-					astriskString = "";
-					spaceCount = length-i;
-					astriskCount = length-2+(i*2);
-					for (int j = 0; j < spaceCount; j++) {
-						astriskString += " ";
-					}
-					for (int k = 0; k < astriskCount; k++) {
-						astriskString += "*";
-					}
-					System.out.println(astriskString);
+					System.out.println(" ".repeat(length-i) + "*".repeat(length-2+(i*2)));
 				}
 			}
 			else {
@@ -185,27 +123,11 @@ public class DrawingShapes {
 			length = keyboard.nextInt();
 			if (length > 1) {
 				System.out.println("Below is a pentagon with 4 side lengths of " + length + " *");
-				// For-loop for upper pentagon - triangle
 				for (int i = 0; i < length-1;i++) {
-					astriskString = "";
-					spaceCount = (length-1)-i;
-					astriskCount = 1+(i*2);
-					for (int j = 0; j < spaceCount; j++) {
-						astriskString += " ";
-					}
-					for (int k = 0; k < astriskCount; k++) {
-						astriskString += "*";
-					}	
-					System.out.println(astriskString);
+					System.out.println(" ".repeat((length-1)-i) + "*".repeat(1+(i*2)));
 				}
-				// For-loop for lower pentagon - rectangle
 				for (int i = 0; i < length;i++) {
-					astriskString = "";
-					astriskCount = (length*2)-1;
-					for (int k = 0; k < astriskCount; k++) {
-						astriskString += "*";
-					}	
-					System.out.println(astriskString);
+					System.out.println("*".repeat((length*2)-1));
 				}
 			}
 			else {
