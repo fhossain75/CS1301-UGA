@@ -143,12 +143,12 @@ public class StringFun {
 				}
 				
 				// Error Handling
-				if (instanceCounter == charRemoveInstance) {
-					inputString = inputString.substring(0,charRemoveIndex) + inputString.substring(charRemoveIndex+1);		
-					System.out.println("The new sentence is: " + inputString);
+				if (charRemoveInstance > instanceCounter) {
+					System.out.println("Error: the letter you are trying to remove does not exist");
 				}
 				else {
-					System.out.println("Error: the letter you are trying to remove does not exist");
+					inputString = inputString.substring(0,charRemoveIndex) + inputString.substring(charRemoveIndex+1);		
+					System.out.println("The new sentence is: " + inputString);	
 				}
 			}
 			
