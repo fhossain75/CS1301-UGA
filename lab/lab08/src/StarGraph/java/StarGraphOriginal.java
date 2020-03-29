@@ -1,7 +1,7 @@
 /*
  * StarGraph.java
  * Author:  Faisal Hossain
- * Submission Date:  March 28, 2020
+ * Submission Date:  March 6, 2020
  *
  * Purpose: Provides  a graphical representation of the function,
  * using a sequence of ‘*’s to indicate the magnitude of y. Values
@@ -29,13 +29,11 @@ package StarGraph.java;
 
 import java.util.Scanner; // Import Scanner class
 
-public class StarGraph {
+public class StarGraphOriginal {
 	
 	public static int N; // size N of the array
 	public static double xMin; // minimum value for x
 	public static double xIncr; // increment for x
-	public static int astriskCount = 0;
-	public static String astriskString = "";
 
 	public static void main(String[] args) {
 
@@ -86,12 +84,7 @@ public class StarGraph {
 		// Print simple graph of the function
 		System.out.println("\nGraph");
 		for (int i = 0; i < N; i++) {
-			astriskString = "";
-			astriskCount = (int) yValues[i];
-			for (int j = 0; j < astriskCount; j++) {
-				astriskString += "*";
-			}
-			System.out.println(":" + astriskString);
+			System.out.println(":" + "*".repeat((int) yValues[i]));
 		}
 		
 		keyboard.close();
